@@ -165,3 +165,7 @@ These updates will facilitate access to the intermediate analytical files and ra
 Scripts are organized according to the analytical workflow and should be executed in the indicated order.
 
 Input files, reference databases, software dependencies, and directory paths must be configured according to the user's computational environment before execution.
+
+## Author
+Cristina Domínguez Verde, cdominguez@unizar.es
+University of Zaragoza, Spain
