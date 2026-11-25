@@ -28,7 +28,6 @@ thermal-water-skin-microbiome/
 │
 ├── README.md
 ├── LICENSE
-├── .gitignore
 │
 ├── 01_taxonomic_analysis/
 │   ├── 01_preprocessing_and_taxonomic_assignment/
