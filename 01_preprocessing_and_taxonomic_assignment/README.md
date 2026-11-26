@@ -117,9 +117,6 @@ Separate objects were generated for facial and forearm samples and saved as RDS 
 | Chopper | 0.8.0 |
 | minimap2 | 2.24-r1122 |
 | yacrd | 1.0.0 |
-| MetONTIIME | Pipeline version to be specified |
-| VSEARCH | Version to be specified |
-| QIIME 2 | Version to be specified |
 
 The preprocessing tools were executed in a dedicated Conda environment (`nanopore`). Taxonomic assignment was performed in a separate environment (`MetONTIIME_env`).
 
