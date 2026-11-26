@@ -83,8 +83,6 @@ The analyses include:
 - Taxonomic composition and relative abundance.
 - Alpha diversity analysis.
 - Beta diversity analysis based on centered log-ratio (CLR) transformation and Aitchison distances.
-- Non-metric multidimensional scaling (NMDS).
-- Distance-based redundancy analysis (dbRDA).
 - Differential taxonomic abundance analysis.
 
 **Script:**
