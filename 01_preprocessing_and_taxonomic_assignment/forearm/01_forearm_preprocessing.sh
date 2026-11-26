@@ -8,7 +8,7 @@
 #
 # Description:
 # Quality control, adapter removal, sequence length
-# filtering and chimera removal of facial skin
+# filtering and chimera removal of forearm skin
 # 16S rRNA gene sequencing reads.
 #
 # Software:
