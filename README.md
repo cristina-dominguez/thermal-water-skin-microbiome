@@ -32,9 +32,11 @@ thermal-water-skin-microbiome/
 ├── 01_taxonomic_analysis/
 │   ├── 01_preprocessing_and_taxonomic_assignment/
 │   │   ├── face/
-│   │   │   └── 01_face_preprocessing_taxonomic_assignment.sh
+│   │   │   ├── 01_face_preprocessing.sh
+│   │   │   └── 02_face_taxonomic_assigment.sh 
 │   │   ├── forearm/
-│   │   │   └── 01_forearm_preprocessing_taxonomic_assignment.sh
+│   │   │   ├── 01_forearm_preprocessing.sh
+│   │   │   └── 02_face_taxonomic_assigment.sh
 │   │   └── README.md
 │   │
 │   └── 02_taxonomic_diversity_and_differential_abundance/
