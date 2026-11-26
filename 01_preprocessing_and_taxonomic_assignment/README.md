@@ -122,17 +122,58 @@ The preprocessing tools were executed in a dedicated Conda environment (`nanopor
 
 ## Input files and configuration
 
-Before running the scripts, the following elements must be available and configured:
+Before running the scripts, the following files and dependencies must be available and properly configured:
 
-1. Raw or previously concatenated FASTQ files, organized into individual sample directories.
-2. The appropriate sample metadata file for each anatomical site.
-3. The MetONTIIME pipeline (`MetONTIIME.sh`) and its required dependencies.
-4. SILVA 138.1 reference artifacts (`silva-138-99-seqs.qza` and `silva-138-99-tax.qza`).
-5. Valid input and output directory paths.
+### 1. FASTQ files
 
-All directory paths and software locations must be adapted to the local computational environment.
+Raw or previously concatenated sequencing reads must be organized by anatomical site (`face/` and `forearm/`) and individual sample directories:
 
-Sample identifiers in the FASTQ filenames must match those in the corresponding metadata files.
+```text
+input/
+├── face/
+│   ├── SAMPLE_001/
+│   │   └── SAMPLE_001.fastq.gz
+│   └── ...
+└── forearm/
+    ├── SAMPLE_001/
+    │   └── SAMPLE_001.fastq.gz
+    └── ...
+```
+
+FASTQ files must correspond to the samples selected for the analysis, with sequencing runs merged where necessary. These files do not need to be uploaded to GitHub.
+
+### 2. Sample metadata
+
+Two independent metadata files are required:
+
+- `metadata_face.tsv`
+- `metadata_forearm.tsv`
+
+Both files must follow the metadata format required by MetONTIIME/QIIME 2. Sample identifiers must match the corresponding FASTQ filenames exactly. All original metadata columns and variable names required by the pipeline must be retained.
+
+### 3. MetONTIIME pipeline
+
+The `MetONTIIME.sh` script is required to perform preprocessing and taxonomic assignment. Ensure that the appropriate pipeline version and all its dependencies are installed and accessible.
+
+If the script was developed by your research group, it can be included in the repository provided that redistribution is authorized. Otherwise, document this dependency and provide a link to the original repository.
+
+### 4. SILVA reference database
+
+The following SILVA 138 reference artifacts are required:
+
+```text
+reference/
+├── silva-138-99-seqs.qza
+└── silva-138-99-tax.qza
+```
+
+These files are not included in the repository due to their size. They must be obtained separately and placed in the `reference/` directory before execution.
+
+### 5. Path configuration
+
+All input and output directory paths, reference database locations and software paths must be adapted to the local computational environment. In particular, replace any absolute paths referring to the original computer or storage system with the corresponding local paths.
+
+**Important:** FASTQ files, metadata files and SILVA reference artifacts must be available locally before running the scripts, even though they are not necessarily distributed through this GitHub repository.
 
 ## Normalization
 
